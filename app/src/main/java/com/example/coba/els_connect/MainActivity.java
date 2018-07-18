@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         startRequestApiGetPosting();
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
 
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        FragmentTransaction transaction = getFragmentManager().beginTransaction().setTransition( FragmentTransaction.TRANSIT_FRAGMENT_OPEN );
         transaction.replace(R.id.layout_main, postingFragment);
         transaction.addToBackStack(null);
         transaction.commit();
@@ -163,13 +163,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                     Log.d("responpost", response.body().string());
 
-                    try {
-                        JSONObject job = new JSONObject(response.body().string());
-                        Log.d("thejob", job.toString());
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
+//                    try {
+//                        JSONObject job = new JSONObject(response.body().string());
+//                        Log.d("thejob", job.toString());
+//
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
 
 
                 }

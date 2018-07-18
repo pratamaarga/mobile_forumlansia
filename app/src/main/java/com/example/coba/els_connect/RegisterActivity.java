@@ -82,8 +82,27 @@ public class RegisterActivity extends AppCompatActivity {
 
                         Log.d("testRegister", "Berhasil");
 
+                        String fooString1 = new String(addPassword);
+                        String fooString2 = new String(addRepassword);
+
+
+
+
+
+
+
                         //startRequestApiRegist(addEmail,addPassword,addRepassword);
-                        startRequestApiRegist(addEmail,addPassword);
+                        if(!fooString1.equals(fooString2)){
+
+                                regPassword.setError("Password tidak sama dengan re-trype password");
+                                regrepassword.setError("Password tidak sama dengan password");
+
+                        }else{
+
+                            startRequestApiRegist(addEmail,addPassword);
+                            clearInput();
+                        }
+
                     }
 
 
@@ -153,6 +172,15 @@ public class RegisterActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+
+    public void clearInput(){
+
+        regEmail.setText("");
+        regPassword.setText("");
+        regrepassword.setText("");
 
     }
 
