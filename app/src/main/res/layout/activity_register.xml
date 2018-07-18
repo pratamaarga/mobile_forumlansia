@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/Reg_logo"
+        android:layout_width="138dp"
+        android:layout_height="117dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/reg_logo_desc"
+        app:srcCompat="@mipmap/ic_launcher"
+
+        />
+
+    <EditText
+        android:id="@+id/reg_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="@string/reg_email_hint"
+        android:inputType="textEmailAddress"
+        android:padding="15dp"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/reg_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="@string/reg_pass_hint"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textSize="14sp"
+        />
+
+    <EditText
+        android:id="@+id/reg_repassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="@string/reg_repass_hint"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textSize="14sp"
+        />
+
+    <Button
+        android:id="@+id/create_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="87dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:background="#00998c"
+        android:padding="16dp"
+        android:text="@string/reg_creat_btn_text"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        />
+
+    <Button
+        android:id="@+id/already_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/background_light"
+        android:padding="15dp"
+        android:text="@string/reg_already_hint"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_dark" />
+
+</LinearLayout>
